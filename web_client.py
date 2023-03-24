@@ -17,7 +17,7 @@ def standby():
 async def hello():
     while True:
         try:
-            async with websockets.connect("ws://91.210.51.24:5000") as websocket:
+            async with websockets.connect("ws://<ip_addres>:<port>") as websocket:
                 await websocket.send("###raspberry###")
                 while True: 
                     message = await websocket.recv()
